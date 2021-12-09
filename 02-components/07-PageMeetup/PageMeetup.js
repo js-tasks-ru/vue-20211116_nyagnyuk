@@ -41,9 +41,7 @@ export default defineComponent({
 
   template: `
     <div class='page-meetup'>
-      <template v-if='meetup'>
-        <meetup-view :meetup='meetup'/>
-      </template>
+      <meetup-view :meetup='meetup' v-if='meetup'/>
 
       <template v-else>
         <ui-container v-if='errorMeetup?.length'>

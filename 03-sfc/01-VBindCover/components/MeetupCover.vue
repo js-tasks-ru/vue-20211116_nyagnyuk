@@ -1,22 +1,32 @@
 <template>
-  <div class="meetup-cover">
-    <h1 class="meetup-cover__title">Title</h1>
+  <div class="meetup-cover" :style="image &&  {'--bg-url': `url(${image})` }">
+    <h1 class="meetup-cover__title">{{ title }}</h1>
   </div>
 </template>
 
 <script>
 export default {
   name: 'MeetupCover',
+
+  props: {
+    image:{
+      type:String,
+    },
+
+    title: {
+      type:String,
+    }
+  }
 };
 </script>
-
+color: v-bind(color);
 <style scoped>
 .meetup-cover {
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('https://course-vue.javascript.ru/api/images/2');
-  /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), var(--default-cover); */
+  /*background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),*/
+  /*  url('https://course-vue.javascript.ru/api/images/2');*/
+   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), v-bind(var(--default-cover));
   display: flex;
   flex-direction: column;
   align-items: center;

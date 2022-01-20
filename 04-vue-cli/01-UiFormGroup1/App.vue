@@ -1,9 +1,9 @@
 <template>
   <ui-container class="sample">
     <ui-form-group>
-      <div class="input-group">
-        <input class="form-control" placeholder="No label" />
-      </div>
+        <div class="input-group">
+          <input class="form-control" placeholder="No label" />
+        </div>
     </ui-form-group>
 
     <hr />
